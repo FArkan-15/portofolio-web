@@ -1205,6 +1205,10 @@ body.cursor-glow-active .cursor-glow {
   gap: 0.5rem;
 }
 
+.footer-links li {
+  list-style: none;
+}
+
 .footer-links a {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -1220,6 +1224,7 @@ body.cursor-glow-active .cursor-glow {
 
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
 }
 
@@ -1229,16 +1234,23 @@ body.cursor-glow-active .cursor-glow {
   justify-content: center;
   width: 40px;
   height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-muted);
   transition: all var(--transition);
+  overflow: hidden;
 }
 
 .footer-social-link svg {
   width: 18px;
   height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  flex-shrink: 0;
 }
 
 .footer-social-link:hover {
