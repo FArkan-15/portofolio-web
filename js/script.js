@@ -29,9 +29,10 @@
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         navMenu?.classList.remove('open');
         navToggle?.classList.remove('active');
+        document.body.style.overflow = '';
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });

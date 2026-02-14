@@ -1160,6 +1160,8 @@ body.cursor-glow-active .cursor-glow {
     gap: 0.25rem;
     border-left: 1px solid var(--border);
     transition: right var(--transition);
+    z-index: 1000;
+    overflow-y: auto;
   }
 
   .nav-menu.open {
