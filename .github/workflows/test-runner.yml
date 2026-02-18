@@ -1,4 +1,4 @@
-name: Test Self Hosted Runner
+name: Auto Deploy
 
 on:
   push:
@@ -6,15 +6,11 @@ on:
       - main
 
 jobs:
-  test:
+  deploy:
     runs-on: self-hosted
 
     steps:
-      - name: Check whoami
-        run: whoami
-
-      - name: Check hostname
-        run: hostname
-
-      - name: Check directory
-        run: pwd
+      - name: Pull latest code in server
+        run: |
+          cd /var/www/html
+          git pull origin main
